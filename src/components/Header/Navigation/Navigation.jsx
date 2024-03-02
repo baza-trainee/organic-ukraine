@@ -4,7 +4,7 @@ import css from './Navigation.module.css';
 
 export const Navigation = () => {
   return (
-    <nav>
+    <nav className={css.navigation}>
       <ul className={css.list}>
         <li>
           <Link to="WhatWeDo" smooth="true" duration={500} className={css.link}>
