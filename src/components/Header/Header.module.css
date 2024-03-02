@@ -1,4 +1,6 @@
 .header {
+    justify-content: center;
+    align-items: center;
     width: 100%;
     top: 0;
     left: 0;
@@ -12,4 +14,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.logo {
+    width: 89px;
+    height: 42px;
 }
