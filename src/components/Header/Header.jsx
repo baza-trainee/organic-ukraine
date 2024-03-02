@@ -2,19 +2,16 @@ import { Container } from '../Common/Container/Container';
 import { Navigation } from './Navigation/Navigation';
 
 import style from './Header.module.css';
-// import { LogoOrganic } from '../Common/Logo/LogoOrganic';
-import Logo from '../../assets/icons/logoOrganic.svg';
 import { SelectLanguage } from './SelectLanguage/SelectLanguage';
 import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
+import { LogoOrganic } from '../Common/Logo/LogoOrganic';
 
 export const Header = () => {
   return (
     <section className={style.header}>
       <Container>
         <div className={style.header_box}>
-          <img src={Logo} alt="logo" className={style.logo} />
-          {/* <Logo /> */}
-          {/* <LogoOrganic /> */}
+          <LogoOrganic />
           <Navigation />
           <div className={style.link_box}>
             <SelectLanguage />
