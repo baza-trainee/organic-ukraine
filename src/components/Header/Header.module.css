@@ -17,11 +17,6 @@
     align-items: center;
 }
 
-.logo {
-    width: 89px;
-    height: 42px;
-}
-
 .link_box {
     display: flex;
     justify-content: space-between;
