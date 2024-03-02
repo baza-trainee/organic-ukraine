@@ -14,9 +14,18 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     width: 89px;
     height: 42px;
+}
+
+.link_box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 299px;
+    width: 100%;
+    align-items: center;
 }

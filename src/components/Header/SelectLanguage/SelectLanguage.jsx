@@ -8,13 +8,20 @@ const option = [
 ];
 
 export const SelectLanguage = () => {
-  const [selectedOption, setSelectedOption] = useState('en');
+  const [selectedOption, setSelectedOption] = useState({
+    value: 'uk',
+    label: 'UA',
+  });
+
+  const handelChange = selectedOption => {
+    setSelectedOption(selectedOption);
+  };
 
   return (
     <>
       <Select
         defaultValue={selectedOption}
-        onChange={setSelectedOption}
+        onChange={handelChange}
         options={option}
       />
     </>

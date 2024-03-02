@@ -1,0 +1,13 @@
+.link {
+    border-radius: 32px;
+    padding: 19px 32px;
+    min-width: 219px;
+    height: 56px;
+    box-shadow: 0 1px 3px 1px rgba(93, 70, 63, 0.15), 0 1px 2px 0 rgba(93, 70, 63, 0.3);
+    background: var(--primary-green-300);
+    font-family: var(--font3);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--secondary-brown-950);
+}

@@ -5,6 +5,7 @@ import style from './Header.module.css';
 // import { LogoOrganic } from '../Common/Logo/LogoOrganic';
 import Logo from '../../assets/icons/logoOrganic.svg';
 import { SelectLanguage } from './SelectLanguage/SelectLanguage';
+import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
 
 export const Header = () => {
   return (
@@ -15,8 +16,10 @@ export const Header = () => {
           {/* <Logo /> */}
           {/* <LogoOrganic /> */}
           <Navigation />
-          <SelectLanguage />
-          <button>Підтримати</button>
+          <div className={style.link_box}>
+            <SelectLanguage />
+            <SupportTheProject />
+          </div>
         </div>
       </Container>
     </section>
