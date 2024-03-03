@@ -9,10 +9,22 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'uk',
-    debug: true,
+    // debug: true,
+
+    ns: [
+      'Header',
+      'SupportTheProject',
+      'ArticlesAndTips',
+      'FarmLocationsMap',
+      'Footer',
+      'Hero',
+      'OrganicGoods',
+      'OurPartners',
+      'WhatWeDo',
+    ],
+
     backend: {
       loadPath: 'locales/{{lng}}/{{ns}}/translation.json',
-      // loadPath: 'public/locales/{{lng}}/translation.json',
     },
   });
 
