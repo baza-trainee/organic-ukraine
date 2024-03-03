@@ -27,18 +27,13 @@
     --secondary-brown-950: #31221e;
 
 
-    --font-family: "SF Pro Display",
-        sans-serif;
-    --second-family: "Jost",
-        sans-serif;
-    --third-family: "Nunito",
-        sans-serif;
-    --font3: "Source Sans 3",
-        sans-serif;
-    --font4: "Inter",
-        sans-serif;
-    --font5: "Roboto",
-        sans-serif;
-    --font6: "Open Sans",
-        sans-serif;
+
+    --font-family: "Source Sans 3", sans-serif;
+    --second-family: "Jost", sans-serif;
+    --third-family: "SF Pro Display", sans-serif;
+    --font3: "Nunito", sans-serif;
+    --font4: "Inter", sans-serif;
+    --font5: "Roboto", sans-serif;
+    --font6: "Open Sans", sans-serif;
+
 }
