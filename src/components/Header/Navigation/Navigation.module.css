@@ -5,6 +5,8 @@
   align-items: center;
   list-style: none;
   min-width: 682px;
+  /* max-width: 682px;
+  width: 100%; */
 }
 
 .link {
