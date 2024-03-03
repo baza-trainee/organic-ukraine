@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import css from './SupportTheProject.module.css';
 
 export const SupportTheProject = () => {
+  const { t } = useTranslation('SupportTheProject');
   return (
     <>
       <a
@@ -9,7 +11,8 @@ export const SupportTheProject = () => {
         rel="noopener noreferrer"
         className={css.link}
       >
-        Підтримати проєкт
+        {t('SupportTheProject')}
+        {/* Підтримати проєкт */}
       </a>
     </>
   );
