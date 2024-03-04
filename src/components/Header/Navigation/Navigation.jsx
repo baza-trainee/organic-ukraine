@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 
-import css from './Navigation.module.css';
+import css from './Navigation.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const itemsNavigation = [

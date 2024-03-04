@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
+import { customStyleSelect } from './SelectLanguage';
 
 const options = [
   { value: 'uk', label: 'UA' },
@@ -8,46 +9,14 @@ const options = [
   { value: 'pl', label: 'PL' },
 ];
 
-const customStyleSelect = {
-  control: provided => ({
-    ...provided,
-    backgroundColor: 'var(--secondary-brown-200)',
-    borderRadius: '50%',
-    border: 'none',
-    width: '56px',
-    height: '56px',
-    fontFamily: 'var(--font-family)',
-    fontWeight: '600',
-    fontSize: '18px',
-    lineHeight: '100%',
-    textAlign: 'center',
-    color: 'var(--secondary-brown-950)',
-    borderright: 'none',
-    cursor: 'pointer',
-  }),
-  dropdownIndicator: (base, state) => ({
-    ...base,
-    display: 'none',
-  }),
-  indicatorSeparator: () => ({
-    display: 'none',
-  }),
-  menu: provided => ({
-    ...provided,
-    backgroundColor: 'var(--secondary-brown-200)',
-    // Style your menu here
-  }),
-  valueContainer: provided => ({
-    ...provided,
-    justifyContent: 'center',
-    // Any additional styles for value container
-  }),
-};
-
 export const SelectLanguage = () => {
   const { i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState(
     options.find(option => option.value === i18n.language) || options[0]
+  );
+
+  const filteredOptions = options.filter(
+    option => option.value !== i18n.language
   );
 
   const handleChange = selectedOption => {
@@ -75,7 +44,7 @@ export const SelectLanguage = () => {
         styles={customStyleSelect}
         value={selectedOption}
         onChange={handleChange}
-        options={options}
+        options={filteredOptions}
       />
     </>
   );

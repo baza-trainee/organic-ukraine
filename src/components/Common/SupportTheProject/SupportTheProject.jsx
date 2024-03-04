@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import css from './SupportTheProject.module.css';
+import css from './SupportTheProject.module.scss';
 
 export const SupportTheProject = () => {
   const { t } = useTranslation('SupportTheProject');
