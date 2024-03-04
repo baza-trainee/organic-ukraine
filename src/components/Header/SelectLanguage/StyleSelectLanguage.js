@@ -1,4 +1,4 @@
-export const customStyleSelect = {
+const customStyleSelect = {
   control: (provided, state) => ({
     ...provided,
 
@@ -91,3 +91,4 @@ export const customStyleSelect = {
     },
   }),
 };
+export default customStyleSelect;

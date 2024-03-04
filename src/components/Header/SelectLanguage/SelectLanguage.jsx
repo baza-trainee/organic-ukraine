@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
-import { customStyleSelect } from './SelectLanguage';
+import customStyleSelect from './StyleSelectLanguage';
 
 const options = [
   { value: 'uk', label: 'UA' },
