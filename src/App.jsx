@@ -10,7 +10,7 @@ import { FarmLocationsMap } from './components/FarmLocationsMap/FarmLocationsMap
 function App() {
   return (
     <>
-      <Header />
+      <Header />  
       <Hero />
       <WhatWeDo />
       <OrganicGoods />
