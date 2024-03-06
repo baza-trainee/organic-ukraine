@@ -67,14 +67,3 @@ export const WhatWeDo = () => {
   );
 };
 
-{
-  /* <div className={css.stats_container}>
-  {stats.map((stat, index, img, alt) => (
-    <div className={css.stat} key={index}>
-      <img className={css.stats_img} src={stat.img} alt={stat.alt} />
-      <span className={css.stat_value}>{stat.value}</span>
-      <span className={css.stat_label}>{stat.label}</span>
-    </div>
-  ))}
-</div>; */
-}
