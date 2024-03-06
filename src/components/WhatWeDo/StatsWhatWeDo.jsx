@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import farms from '../../assets/WhatWeDo/farms.png';
 import lands from '../../assets/WhatWeDo/lands.png';
 import workers from '../../assets/WhatWeDo/workers.png';
 
+const {t} = useTranslation("WhatWeDo")
 const stats = [
   {
     value: '53',

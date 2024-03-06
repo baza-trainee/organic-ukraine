@@ -6,26 +6,19 @@ import { Container } from '../Common/Container/Container';
 
 import stats from '../WhatWeDo/StatsWhatWeDo.jsx';
 import images from '../WhatWeDo/ImagesWhatWeDo.jsx';
+import { useTranslation } from 'react-i18next';
 
 export const WhatWeDo = () => {
+  const { t } = useTranslation('WhatWeDo');
   return (
     <section>
       <Container>
         <div className={css.container}>
           <div className={css.section_header}>
-            <h2 className={css.main_title}>Що ми робимо</h2>
-            <p className={css.section_title}>
-              Сприяючи здоров'ю та природі: передові органічні виробники в серці
-              України
-            </p>
-            <p className={css.section_text}>
-              Органічні виробництва в Україні відіграють ключову роль у
-              створенні здорового та екологічно чистого продовольчого ланцюга.
-              Їх діяльність фокусується на вирощуванні продуктів без
-              використання хімічних добрив та пестицидів, з використанням
-              природних методів обробки ґрунту.
-            </p>
-            <button className={css.read_button}>Читати більше</button>
+            <h2 className={css.main_title}>{t('WhatWeDo')}</h2>
+            <p className={css.section_title}>{t('BoldText')}</p>
+            <p className={css.section_text}>{t('Text')}</p>
+            <button className={css.read_button}>{t("Button") }</button>
 
             <div className={css.stats_container}>
               {stats.map((stat, index, img, alt) => (
