@@ -1,80 +1,11 @@
 import React from 'react';
 
 import css from './WhatWeDo.module.css';
+
 import { Container } from '../Common/Container/Container';
 
-const stats = [
-  { value: '53+', label: 'господарств' },
-  { value: '221+', label: 'земель' },
-  { value: '3770+', label: 'працівників' },
-];
-
-const images = [
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-  {
-    src: '',
-    alt: '',
-  },
-];
+import stats from '../WhatWeDo/StatsWhatWeDo.jsx';
+import images from '../WhatWeDo/ImagesWhatWeDo.jsx';
 
 export const WhatWeDo = () => {
   return (
@@ -97,11 +28,12 @@ export const WhatWeDo = () => {
             <button className={css.read_button}>Читати більше</button>
 
             <div className={css.stats_container}>
-              {stats.map((stat, index) => (
+              {stats.map((stat, index, img, alt) => (
                 <div className={css.stat} key={index}>
                   <img
-                    src={`https://placehold.co/100`}
-                    alt={`Placeholder for ${stat.label}`}
+                    className={css.stats_img}
+                    src={stat.img}
+                    alt={stat.alt}
                   />
                   <span className={css.stat_value}>{stat.value}</span>
                   <span className={css.stat_label}>{stat.label}</span>
@@ -114,8 +46,8 @@ export const WhatWeDo = () => {
               <div className={css.image} key={index}>
                 <img
                   className={css.image_item}
-                  src={image.imageUrl || `https://placehold.co/100`}
-                  alt={image.name}
+                  src={image.src || `https://placehold.co/100`}
+                  alt={image.alt}
                 />
               </div>
             ))}
