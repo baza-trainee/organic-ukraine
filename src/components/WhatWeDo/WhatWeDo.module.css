@@ -95,7 +95,7 @@
 }
 
 .stats_img {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .stat_value {
@@ -145,7 +145,6 @@ margin-bottom: 20px;
   border-radius: 50%;
   width: 117px;
   height: 117px;
-
 }
 
 /* .c_about-us-frame {

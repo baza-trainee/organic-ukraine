@@ -4,7 +4,7 @@ import css from './WhatWeDo.module.css';
 
 import { Container } from '../Common/Container/Container';
 
-import stats from '../WhatWeDo/StatsWhatWeDo.jsx';
+
 import images from '../WhatWeDo/ImagesWhatWeDo.jsx';
 import { useTranslation } from 'react-i18next';
 
@@ -18,20 +18,36 @@ export const WhatWeDo = () => {
             <h2 className={css.main_title}>{t('WhatWeDo')}</h2>
             <p className={css.section_title}>{t('BoldText')}</p>
             <p className={css.section_text}>{t('Text')}</p>
-            <button className={css.read_button}>{t("Button") }</button>
+            <button className={css.read_button}>{t('Button')}</button>
 
             <div className={css.stats_container}>
-              {stats.map((stat, index, img, alt) => (
-                <div className={css.stat} key={index}>
-                  <img
-                    className={css.stats_img}
-                    src={stat.img}
-                    alt={stat.alt}
-                  />
-                  <span className={css.stat_value}>{stat.value}</span>
-                  <span className={css.stat_label}>{stat.label}</span>
-                </div>
-              ))}
+              <div className={css.stat}>
+                <img
+                  className={css.stats_img}
+                  src="./src/assets/WhatWeDo/farms.png"
+                  alt="farms"
+                />
+                <span className={css.stat_value}>53</span>
+                <span className={css.stat_label}>{t('Farms')}</span>
+              </div>
+              <div className={css.stat}>
+                <img
+                  className={css.stats_img}
+                  src="./src/assets/WhatWeDo/lands.png"
+                  alt="farms"
+                />
+                <span className={css.stat_value}>221</span>
+                <span className={css.stat_label}>{t('Lands')}</span>
+              </div>
+              <div className={css.stat}>
+                <img
+                  className={css.stats_img}
+                  src="./src/assets/WhatWeDo/workers.png"
+                  alt="farms"
+                />
+                <span className={css.stat_value}>3770</span>
+                <span className={css.stat_label}>{t('Workers')}</span>
+              </div>
             </div>
           </div>
           <div className={css.images_container}>
@@ -50,3 +66,15 @@ export const WhatWeDo = () => {
     </section>
   );
 };
+
+{
+  /* <div className={css.stats_container}>
+  {stats.map((stat, index, img, alt) => (
+    <div className={css.stat} key={index}>
+      <img className={css.stats_img} src={stat.img} alt={stat.alt} />
+      <span className={css.stat_value}>{stat.value}</span>
+      <span className={css.stat_label}>{stat.label}</span>
+    </div>
+  ))}
+</div>; */
+}
