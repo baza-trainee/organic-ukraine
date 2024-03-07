@@ -10,14 +10,14 @@ export const Header = () => {
   return (
     <section className={style.header}>
       <Container>
-        <div className={style.header_box}>
+        <header className={style.header_box}>
           <LogoOrganic />
           <Navigation />
           <div className={style.link_box}>
             <SelectLanguage />
             <SupportTheProject />
           </div>
-        </div>
+        </header>
       </Container>
     </section>
   );

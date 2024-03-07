@@ -7,8 +7,8 @@ const itemsNavigation = [
   { name: 'WhatWeDo' },
   { name: 'OrganicGoods' },
   { name: 'ArticlesAndTips' },
-  { name: 'OurPartners' },
   { name: 'FarmLocationsMap' },
+  { name: 'OurPartners' },
   { name: 'Footer' },
 ];
 
