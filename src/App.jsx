@@ -6,11 +6,12 @@ import { ArticlesAndTips } from './components/ArticlesAndTips/ArticlesAndTips';
 import { OurPartners } from './components/OurPartners/OurPartners';
 import { Footer } from './components/Footer/Footer';
 import { FarmLocationsMap } from './components/FarmLocationsMap/FarmLocationsMap';
+import { ScrollUp } from './components/Common/ScrollUp/ScrollUp';
 
 function App() {
   return (
     <>
-      <Header />  
+      <Header />
       <Hero />
       <WhatWeDo />
       <OrganicGoods />
@@ -18,6 +19,7 @@ function App() {
       <OurPartners />
       <FarmLocationsMap />
       <Footer />
+      <ScrollUp />
     </>
   );
 }
