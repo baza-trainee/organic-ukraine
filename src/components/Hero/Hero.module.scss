@@ -1,0 +1,79 @@
+.hero_section {
+  margin-bottom: 139px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main_image {
+  z-index: 0;
+}
+.bottom_image {
+  z-index: 1;
+  position: absolute;
+  bottom: -59px;
+}
+.hero_text_box {
+  z-index: 1;
+  width: 772px;
+  height: 281px;
+  position: absolute;
+  top: 262px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main_text {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 115%;
+  text-align: center;
+
+  color: transparent;
+  background-image: url('../../assets/images/Hero/TextBackground.jpeg');
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.second_text {
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 414px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--secondary-brown-950);
+}
+.customPrevButton,
+.customNextButton {
+  z-index: 1;
+  position: absolute;
+  top: 380px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: var(--secondary-brown-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--light-grey);
+  }
+}
+.customPrevButton {
+  left: 120px;
+}
+.customNextButton {
+  right: 120px;
+  transform: rotate(180deg);
+}

@@ -5,19 +5,20 @@ import style from './Header.module.css';
 import { SelectLanguage } from './SelectLanguage/SelectLanguage';
 import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
 import { LogoOrganic } from '../Common/Logo/LogoOrganic';
+import css from './Navigation/HeaderNavigation.module.scss';
 
 export const Header = () => {
   return (
     <section className={style.header}>
       <Container>
-        <div className={style.header_box}>
+        <header className={style.header_box}>
           <LogoOrganic />
-          <Navigation />
+          <Navigation css={css} />
           <div className={style.link_box}>
             <SelectLanguage />
             <SupportTheProject />
           </div>
-        </div>
+        </header>
       </Container>
     </section>
   );
