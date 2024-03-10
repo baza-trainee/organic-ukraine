@@ -35,10 +35,10 @@
     height: 24px;
   }
 }
-.swiper-button-prev {
+.swiper-first .swiper-button-prev {
   left: 120px;
 }
-.swiper-button-next {
+.swiper-first .swiper-button-next {
   right: 120px;
   transform: rotate(180deg);
 }
