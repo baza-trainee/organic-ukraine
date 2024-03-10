@@ -27,6 +27,7 @@
   }
   &::after {
     content: '';
+    // background-image: url('/src/assets/icons/arrow_swiper.svg');
     background-image: url('/svg/arrow_swiper.svg');
     background-size: contain;
     background-repeat: no-repeat;
