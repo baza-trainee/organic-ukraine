@@ -1,18 +1,18 @@
 import { Link } from 'react-scroll';
 
-import css from './Navigation.module.scss';
+// import style from './HeaderNavigation.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const itemsNavigation = [
   { name: 'WhatWeDo' },
   { name: 'OrganicGoods' },
   { name: 'ArticlesAndTips' },
-  { name: 'OurPartners' },
   { name: 'FarmLocationsMap' },
+  { name: 'OurPartners' },
   { name: 'Footer' },
 ];
 
-export const Navigation = () => {
+export const Navigation = ({ css }) => {
   const { t } = useTranslation('Header');
   return (
     <nav className={css.navigation}>
