@@ -9,11 +9,11 @@ import 'swiper/css/navigation';
 import styles from './OurPartners.module.scss';
 
 import arrowSwiper from '../../assets/icons/arrow_swiper.svg';
-import partnersSlide1 from '../../assets/ourPartners/partners_slide1.png';
-import partnersSlide2 from '../../assets/ourPartners/partners_slide2.png';
-import partnersSlide3 from '../../assets/ourPartners/partners_slide3.png';
-import partnersSlide4 from '../../assets/ourPartners/partners_slide4.png';
-import partnersSlide5 from '../../assets/ourPartners/partners_slide5.png';
+import partnersSlide1 from '../../assets/ourPartners/partners_slide1.webp';
+import partnersSlide2 from '../../assets/ourPartners/partners_slide2.webp';
+import partnersSlide3 from '../../assets/ourPartners/partners_slide3.webp';
+import partnersSlide4 from '../../assets/ourPartners/partners_slide4.webp';
+import partnersSlide5 from '../../assets/ourPartners/partners_slide5.webp';
 
 export const OurPartners = () => {
 
@@ -30,7 +30,7 @@ export const OurPartners = () => {
   const repeatedPartnersSlides = partnersSlides.concat(partnersSlides);
 
   return (
-    <section className={styles.partnersSection}>
+    <section className={styles.partnersSection} id='OurPartners'>
       <Container>
         <div className={styles.partnersSectionHeader}>
           <h2 className={styles.partnersSectionTitle}> {t('OurPartners')}</h2>

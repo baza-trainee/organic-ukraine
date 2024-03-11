@@ -35,6 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: var(--light-grey);
@@ -51,7 +52,8 @@
 
 .partnersSwiperSlide {
  
-  height: 220px;
+  height: auto;
+  padding: 32px;
   border-radius: 20px;
   border: 1px solid var(--secondary-brown-400);
   display: flex;
@@ -61,5 +63,11 @@
 
   &:active {
     cursor: grabbing;
+  }
+
+  & img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
   }
 }
