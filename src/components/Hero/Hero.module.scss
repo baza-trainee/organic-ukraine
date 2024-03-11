@@ -34,12 +34,13 @@
   text-align: center;
 
   color: transparent;
-  background-image: url('../../assets/images/Hero/TextBackground.jpeg');
+  background-image: url('../../assets/images/Hero/TextBackground.webp');
+  background-size: 100% auto;
+  background-position: 0px -490px;
 
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
 }
 .second_text {
   margin-top: 16px;

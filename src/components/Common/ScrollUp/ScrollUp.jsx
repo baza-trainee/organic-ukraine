@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import arrow from '../../../../public/svg/arrow_swiper.svg';
+import arrow from '../../../assets/icons/arrow_swiper.svg';
+// import arrow from '../../../../public/svg/arrow_swiper.svg';
 import style from './ScrollUp.module.scss';
 export const ScrollUp = () => {
   const [isVisible, setIsVisible] = useState(false);

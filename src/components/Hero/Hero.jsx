@@ -32,6 +32,7 @@ export const Hero = () => {
           {baners.map((slide, index) => (
             <SwiperSlide key={index}>
               <img
+                loading="lazy"
                 src={slide}
                 alt="organic baners"
                 className={style.main_image}
