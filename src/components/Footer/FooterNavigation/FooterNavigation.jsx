@@ -22,7 +22,8 @@ export const FooterNavigation = () => {
             <Link
               to={name}
               smooth="true"
-              duration={500}
+              duration={50}
+              offset={-120}
               className={styles.link}
             >
               {t(name)}
@@ -31,9 +32,9 @@ export const FooterNavigation = () => {
         ))}
       </ul>
       <div  className={styles.policy}>
-        <a href="./docs/Policy.pdf" target="_blank" rel="nofollow noopener noreferrer"> {t('Policy')}</a>
+        <a href="docs/Політика_конфіденційності.pdf" target="_blank" rel="nofollow noopener noreferrer"> {t('Policy')}</a>
         <span>|</span>
-        <a href="./docs/Rules.pdf" target="_blank" rel="nofollow noopener noreferrer">{t('Rules')}</a>
+        <a href="docs/Правила_користування_сайтом.pdf" target="_blank" rel="nofollow noopener noreferrer">{t('Rules')}</a>
       </div>
     </nav>
   );

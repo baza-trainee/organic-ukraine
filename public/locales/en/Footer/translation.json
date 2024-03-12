@@ -1,12 +1,14 @@
 {
-  "WhatWeDo": "What We Do",
+  "WhatWeDo": "What we do",
   "OrganicGoods": "Products",
-  "ArticlesAndTips": "ArticlesAndTips",
+  "ArticlesAndTips": "Articles and tips",
   "OurPartners": "Partners",
-  "FarmLocationsMap": "FarmLocationsMap",
+  "FarmLocationsMap": "Farm locations map",
   "Footer": "Contacts",
   "Policy": "Privacy Policy",
   "Rules": "Terms of Use",
-  "Develop": "2024 © Developed by Baza Trainee Ukraine",
+  "Created": "Created by ",
+  "DevelopLink": "BazaTraineeUkraine",
+  "CreatedMark": " 2024 ©",
   "Rights": "All rights reserved"
 }
