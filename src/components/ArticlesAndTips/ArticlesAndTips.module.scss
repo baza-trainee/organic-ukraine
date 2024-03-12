@@ -1,7 +1,7 @@
 .articlesSection {
     margin-top: 150px;
-    background-color: red($color: #000000);
 }
+
 
 .articlesSectionHeader {
     max-width: 1195px;
@@ -52,16 +52,79 @@
 }
 
 .articlesSwiperSlide {
-
-    height: 220px;
+    height: 100%;
     border-radius: 20px;
-    border: 1px solid var(--secondary-brown-400);
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: grab;
+    position: relative;
 
-    &:active {
-        cursor: grabbing;
-    }
+    
+}
+.article {
+    max-width: 486px;
+    width: 100%;
+    height: 500px;
+}
+
+.image {
+    max-width: 100%;
+    width: 486px;
+    height: 500px;
+}
+
+
+.content {
+    position: absolute;
+}
+
+.date {
+    color: var(--white);
+    padding-left: 15px;
+    width: 120px;
+    height: 40px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    left: 3%;
+    background-color: var(--primary-green-400);
+    opacity: 80%;
+    border-radius: 0 20px 20px 0;
+}
+.title {
+    display: flex;
+    max-height: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    max-width: 422px;
+    width: 100%;
+    position: fixed;
+    top: 328px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.arrow {
+    left: 50%;
+    bottom: 45px;
+    position: fixed;
+    background: none;
+    color: var(--white);
+
+}
+.gradientOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px; // Знову, або інший радіус за бажанням
 }
