@@ -11,18 +11,22 @@
 .list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px 7px;
-  width: 410px;
-  height: 168px;
+  gap: 44px 56px;
+  width: 380px;
+  margin: 0 auto;
   list-style: none;
-  padding-left: 74px;
+  justify-content: center;
+  padding-left: 40px;
 }
 
 .link {
   position: relative;
+  max-width: 50px;
   font-family: var(--second-family);
   cursor: pointer;
   transition: color 0.3s ease;
+  
+  
 
   &::before {
     content: '';
@@ -62,7 +66,8 @@
 }
 
 .policy {
-  font-family: var(--font-family);
+  
+  font-family: var(--second-family);
   margin: 48px auto 24px;
   & a {
     text-decoration: underline;

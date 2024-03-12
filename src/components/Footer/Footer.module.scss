@@ -1,10 +1,4 @@
 .footer {
-  max-width: 1440px;
-  margin: 290px auto 0;
-  padding: 128px 120px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   background-color: var(--primary-green-50);
   position: relative;
   &::before {
@@ -19,6 +13,15 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.footerWrapper {
+  margin-top: 130px;
+  padding-top: 128px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footerLogoSocials {
@@ -47,12 +50,19 @@
   align-items: center;
 
   & p {
-    font-family: var(--font-family);
+    font-family: var(--second-family);
+    font-weight: 600;
   }
 
-  & p:first-of-type {
-    margin-bottom: 8px;
-    font-weight: 600;
+  & p a {
+    transition: 0.3s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & span {
+    font-weight: 400;
   }
 }
 
@@ -63,55 +73,56 @@
   justify-content: space-between;
   align-items: end;
 
-  .contacts{
+  .contacts {
     margin-top: 24px;
     padding: 24px 16px 24px 45px;
     border: 1px solid var(--secondary-brown-400);
     border-radius: 20px;
-     font-family: var(--second-family);
-    
-    .phone, .email{
+    font-family: var(--second-family);
+
+    .phone,
+    .email {
       position: relative;
       color: var(--secondary-brown-700);
       font-weight: 500;
       line-height: 1.8;
       transition: all 0.3s ease;
       &:hover {
-      color: var(--primary-green-500);
-    }
+        color: var(--primary-green-500);
+      }
     }
 
-    .phone{
+    .phone {
       margin-bottom: 8px;
 
-       &::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background-image: url('./../../assets/icons/phone.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+      &::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-image: url('./../../assets/icons/phone.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
 
-    .email{
+    .email {
       margin-top: 24px;
-  &::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    background-image: url('./../../assets/icons/email.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+      &::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-image: url('./../../assets/icons/email.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
