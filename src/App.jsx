@@ -60,8 +60,8 @@ function App() {
       <WhatWeDo />
       <OrganicGoods />
       <ArticlesAndTips />
-      <OurPartners />
       <FarmLocationsMap />
+      <OurPartners />
       <Footer />
       <ScrollUp />
     </>
