@@ -15,8 +15,8 @@ export const Header = () => {
           <LogoOrganic />
           <Navigation css={css} />
           <div className={style.link_box}>
-            <SelectLanguage />
             <SupportTheProject />
+            <SelectLanguage />
           </div>
         </header>
       </Container>
