@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
+import style from './Hero.module.scss';
 import heroImage1x from '../../assets/images/Hero/Hero 1X.webp';
+import heroImage21x from '../../assets/images/Hero/Hero2 1x.webp';
 import heroImage2x from '../../assets/images/Hero/Hero 2X.webp';
 import vector from '../../assets/images/Hero/Vector.png';
-
-import style from './Hero.module.scss';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import './swiperStyle.scss';
-const baners = [heroImage1x, heroImage1x, heroImage2x];
+const baners = [heroImage1x, heroImage21x, heroImage2x];
 
 export const Hero = () => {
   const { t } = useTranslation('Hero');
