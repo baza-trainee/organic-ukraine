@@ -11,9 +11,9 @@ import 'swiper/css/navigation';
 
 import styles from './ArticlesAndTips.module.scss';
 
-import articleSlide from '../../assets/ArticlesAndTips/articleSlide.webp';
-import articleSlide2 from '../../assets/ArticlesAndTips/articleSlide2.webp';
-import articleSlide3 from '../../assets/ArticlesAndTips/articleSlide3.webp';
+import articleSlide1F from '../../assets/ArticlesAndTips/articleSlide1F.png';
+import articleSlide2F from '../../assets/ArticlesAndTips/articleSlide2F.png';
+import articleSlide3F from '../../assets/ArticlesAndTips/articleSlide3F.png';
 import slideF from '../../assets/ArticlesAndTips/slideF.webp';
 import slide2F from '../../assets/ArticlesAndTips/slide2F.webp';
 import slide3F from '../../assets/ArticlesAndTips/slide3F.webp';
@@ -24,20 +24,17 @@ const articles = [
     title:
       '5 простих кроків для переходу до щоденного споживання органічних продуктів',
     date: '21.02.2024',
-    link: articleSlide,
-    gradient: slideF,
+    link: articleSlide1F,
   },
   {
     title: "Чому органічні продукти - кращий вибір для вашого здоров'я",
     date: '08.02.2024',
-    link: articleSlide2,
-    gradient: slide2F,
+    link: articleSlide2F,
   },
   {
     title: 'Як органічне сільське господарство впливає на наше середовище',
     date: '23.01.2024',
-    link: articleSlide3,
-    gradient: slide3F,
+    link: articleSlide3F,
   },
 ];
 
@@ -59,7 +56,6 @@ export const ArticlesAndTips = () => {
 
         <Swiper
           modules={[Navigation, Autoplay]}
-          // spaceBetween={4}
           slidesPerView={2.4}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -83,18 +79,17 @@ export const ArticlesAndTips = () => {
                   className={styles.image}
                   src={article.link}
                   alt={`Image placeholder for ${article.title}`}
+                  width={486}
+                  height={500}
                 />
-                <div className={styles.gradientOverlay}>
-                  <img className={styles.image} src={article.gradient} />
-                </div>
 
                 <div className={styles.content}>
                   <div className={styles.date}>{article.date}</div>
                   <div className={styles.title}>{article.title}</div>
+                  <button>
+                    <img src={arrow} alt="logo" className={styles.arrow}></img>
+                  </button>
                 </div>
-                <button>
-                  <img src={arrow} alt="logo" className={styles.arrow}></img>
-                </button>
               </a>
             </SwiperSlide>
           ))}
