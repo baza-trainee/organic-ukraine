@@ -9,15 +9,17 @@ import { Container } from '../Common/Container/Container';
 import mapData from './gadm41_UKR.json';
 import style from './mapStyles.module.scss';
 import './customStyle.css';
+import { useTranslation } from 'react-i18next';
 
 export const FarmLocationsMap = () => {
+  const { t } = useTranslation('FarmLocationsMap');
   // const isSpecialRegion = ['Назва області 1', 'Назва області 2'].includes(
   //   geo.properties.NAME_1
   // );
   return (
     <Container>
       <div id="FarmLocationsMap" className={style.map_container}>
-        <h2 className={style.map_title}>Мапа господарств</h2>
+        <h2 className={style.map_title}>{t('titlemap')}</h2>
         <ComposableMap
           projection="geoAzimuthalEqualArea"
           projectionConfig={{
