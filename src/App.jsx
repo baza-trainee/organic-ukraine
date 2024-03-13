@@ -9,6 +9,7 @@ import { FarmLocationsMap } from './components/FarmLocationsMap/FarmLocationsMap
 import { ScrollUp } from './components/Common/ScrollUp/ScrollUp';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import Favicon from 'react-favicon';
 // import { Suspense } from 'react';
 // import React from 'react';
 // const Header = React.lazy(() => import('../src/components/Header/Header'));
@@ -55,6 +56,7 @@ function App() {
     // </>
 
     <>
+      <Favicon url="favicon.ico" />
       <Header />
       <Hero />
       <WhatWeDo />
