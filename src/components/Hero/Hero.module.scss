@@ -13,11 +13,13 @@
   z-index: 0;
 }
 .bottom_image {
+  pointer-events: none;
   z-index: 1;
   position: absolute;
   bottom: -59px;
 }
 .hero_text_box {
+  pointer-events: none;
   z-index: 1;
   width: 772px;
   height: 281px;
