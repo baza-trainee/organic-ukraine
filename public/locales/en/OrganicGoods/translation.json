@@ -1,0 +1,23 @@
+{
+  "OrganicGoods": " Organic products",
+
+  "Category": {
+    "0": "Fresh and fragrant",
+    "1": "Berries",
+    "2": "Dairy products",
+    "3": "Berries",
+    "4": "Vegetables"
+  },
+
+  "Description": {
+    "0": "Blueberry is an unparalleled gift of nature",
+    "1": "Blackberry is a delicious fruit loved by many",
+    "2": "Blueberry is a healthy and nutritious berry",
+    "3": "Cheese is a dairy product loved by people worldwide",
+    "4": "Cucumber is a refreshing vegetable enjoyed in salads"
+  },
+
+   "Quality": "Organic quality"
+}
+
+

@@ -9,11 +9,15 @@ import 'swiper/css/navigation';
 import styles from './OurPartners.module.scss';
 
 import arrowSwiper from '../../assets/icons/arrow_swiper.svg';
-import partnersSlide1 from '../../assets/ourPartners/partners_slide1.webp';
-import partnersSlide2 from '../../assets/ourPartners/partners_slide2.webp';
-import partnersSlide3 from '../../assets/ourPartners/partners_slide3.webp';
-import partnersSlide4 from '../../assets/ourPartners/partners_slide4.webp';
-import partnersSlide5 from '../../assets/ourPartners/partners_slide5.webp';
+import partnersSlide1 from '../../assets/images/ourPartners/partners_slide1.webp';
+import partnersSlide2 from '../../assets/images/ourPartners/partners_slide2.webp';
+import partnersSlide3 from '../../assets/images/ourPartners/partners_slide3.webp';
+import partnersSlide4 from '../../assets/images/ourPartners/partners_slide4.webp';
+import partnersSlide5 from '../../assets/images/ourPartners/partners_slide5.webp';
+import partnersSlide6 from '../../assets/images/ourPartners/partners_slide6.webp';
+import partnersSlide7 from '../../assets/images/ourPartners/partners_slide7.webp';
+import partnersSlide8 from '../../assets/images/ourPartners/partners_slide8.webp';
+import partnersSlide9 from '../../assets/images/ourPartners/partners_slide9.webp';
 
 export const OurPartners = () => {
 
@@ -25,6 +29,10 @@ export const OurPartners = () => {
     partnersSlide3,
     partnersSlide4,
     partnersSlide5,
+    partnersSlide6,
+    partnersSlide7,
+    partnersSlide8,
+    partnersSlide9
   ];
 
   const repeatedPartnersSlides = partnersSlides.concat(partnersSlides);
@@ -54,8 +62,8 @@ export const OurPartners = () => {
           spaceBetween={8}
           slidesPerView={5.2}
           loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false}}
-          speed={4000}
+          autoplay={{ delay: 2000, disableOnInteraction: false}}
+          speed={3000}
           navigation={{
             prevEl: `.${styles.customPrevButton}`,
             nextEl: `.${styles.customNextButton}`,
