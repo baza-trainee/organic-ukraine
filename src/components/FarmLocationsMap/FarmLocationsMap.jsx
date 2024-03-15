@@ -1,101 +1,65 @@
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
-  // ZoomableGroup,
-} from 'react-simple-maps';
+import { MapContainer, GeoJSON } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import { Container } from '../Common/Container/Container';
 
-import mapData from './gadm41_UKR.json';
+import ukraineGeoJSON from './ukrainegeojson.json';
+
 import style from './mapStyles.module.scss';
 import './customStyle.css';
 import { useTranslation } from 'react-i18next';
 
 export const FarmLocationsMap = () => {
   const { t } = useTranslation('FarmLocationsMap');
-  // const isSpecialRegion = ['Назва області 1', 'Назва області 2'].includes(
-  //   geo.properties.NAME_1
-  // );
+  // const onEachFeature = (feature, layer) => {
+  //   if (feature.properties && feature.properties.NAME_1) {
+  //     layer.bindPopup(feature.properties.NAME_1);
+  //   }
+  // };
+
+  const geoJsonStyle = {
+    fillColor: ' #f9fbea',
+    color: '#c9a9a0',
+    weight: 0.5,
+    fillOpacity: 1,
+  };
+  const onEachFeature = (feature, layer) => {
+    if (feature.properties && feature.properties.NAME_1) {
+      layer.bindPopup(feature.properties.NAME_1);
+      layer.on({
+        mouseover: event => {
+          event.target.setStyle({
+            fillColor: 'yellow', // Колір області при наведенні курсору
+            color: 'green', // Колір межі області при наведенні курсору
+            fillOpacity: 0.8, // Прозорість області при наведенні курсору
+          });
+        },
+        mouseout: event => {
+          event.target.setStyle(geoJsonStyle); // Вертаємо стандартні стилі
+        },
+      });
+    }
+  };
   return (
     <Container>
       <div id="FarmLocationsMap" className={style.map_container}>
         <h2 className={style.map_title}>{t('titlemap')}</h2>
-        <ComposableMap
-          projection="geoAzimuthalEqualArea"
-          projectionConfig={{
-            rotate: [-26.0, -49.0, 0],
-            scale: 5700,
-          }}
-          style={{ width: '100%', height: 'auto' }}
-          viewBox="130 -70 1200 800"
+        <MapContainer
+          center={[48.3794, 31.1656]}
+          zoom={6}
+          style={{ height: '800px', width: '1200px' }}
+          zoomControl={false} // Вимикаємо кнопки зуму
+          scrollWheelZoom={false} // Вимикаємо зум колесом миші
+          doubleClickZoom={false} // Вимикаємо зум подвійним кліком
+          touchZoom={false} // Вимикаємо зум торканням
+          draggable={false} // Вимикаємо перетягування мапи
+          dragging={false}
         >
-          {/* <ZoomableGroup center={[longitude, latitude]} zoom={1}></ZoomableGroup> */}
-          <Geographies geography={mapData}>
-            {({ geographies }) =>
-              geographies.map(geo => {
-                // const isSpecialRegion = [
-                //   'Назва області 1',
-                //   'Назва області 2',
-                // ].includes(geo.properties.NAME_1);
-                const name = geo.properties.NAME_1;
-                const isSpecialRegion =
-                  name === "Luhans'k" ||
-                  name === "Donets'k" ||
-                  name === 'Sevastopol' ||
-                  name === 'Crimea';
-                const regionStyles = isSpecialRegion
-                  ? {
-                      default: {
-                        fill: '#f7f7f7', // Колір для спеціальних областей
-                        stroke: '#b0b0b0',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-
-                      hover: {
-                        fill: '#f7f7f7', // Той самий колір на ховер для спеціальних областей
-                        stroke: '#b0b0b0',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                      pressed: {
-                        fill: '#f7f7f7', // Той самий колір на клік для спеціальних областей
-                        stroke: '#b0b0b0',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                    }
-                  : {
-                      default: {
-                        fill: '#f9fbea', // колір області
-                        stroke: '#c9a9a0', //  колір для ліній меж
-                        strokeWidth: 0.75, // товщина лінії меж
-                        outline: 'none', // визначає контур навколо областей, який ми відключаємо, встановлюючи none.
-                      },
-                      hover: {
-                        fill: '#f1f6d1',
-                        stroke: '#c9a9a0',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                      pressed: {
-                        fill: '#f1f6d1',
-                        stroke: '#c9a9a0',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                    };
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    style={regionStyles}
-                  />
-                );
-              })
-            }
-          </Geographies>
-        </ComposableMap>
+          <GeoJSON
+            data={ukraineGeoJSON}
+            style={geoJsonStyle}
+            onEachFeature={onEachFeature}
+          />
+        </MapContainer>
       </div>
     </Container>
   );
