@@ -8,13 +8,9 @@ i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'uk',
+    fallbackLng: ['uk-UA', 'ua'],
     // debug: true,
-    detection: {
-      order: ['navigator', 'cookie', 'htmlTag', 'path', 'subdomain'],
-      lookupFromPathIndex: 0,
-      checkWhitelist: true,
-    },
+
     ns: [
       'Header',
       'SupportTheProject',
