@@ -9,7 +9,7 @@ i18next
   .use(initReactI18next)
   .init({
     fallbackLng: ['uk-UA', 'ua'],
-    debug: true,
+    // debug: true,
 
     ns: [
       'Header',
