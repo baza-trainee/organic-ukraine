@@ -5,6 +5,10 @@ import css from './WhatWeDo.module.css';
 import { Container } from '../Common/Container/Container';
 
 import images from '../WhatWeDo/ImagesWhatWeDo.jsx';
+import farms from '../../assets/WhatWeDo/farms.png'
+import lands from '../../assets/WhatWeDo/lands.png'
+import workers from '../../assets/WhatWeDo/workers.png'
+
 import { useTranslation } from 'react-i18next';
 import Modal from '../WhatWeDo/WWDModal.jsx';
 
@@ -62,7 +66,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="../../assets/WhatWeDo/farms.png"
+
+                  src={farms}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>53</span>
@@ -71,7 +77,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="../../assets/WhatWeDo/lands.png"
+
+                  src={lands}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>221</span>
@@ -80,7 +88,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="../../assets/WhatWeDo/workers.png"
+
+                  src={workers}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>3770</span>
