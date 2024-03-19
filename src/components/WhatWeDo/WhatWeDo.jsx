@@ -62,7 +62,7 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="/src/assets/WhatWeDo/farms.png"
+                  src="../../assets/WhatWeDo/farms.png"
                   alt="farms"
                 />
                 <span className={css.stat_value}>53</span>
@@ -71,7 +71,7 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="/src/assets/WhatWeDo/lands.png"
+                  src="../../assets/WhatWeDo/lands.png"
                   alt="farms"
                 />
                 <span className={css.stat_value}>221</span>
@@ -80,7 +80,7 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
-                  src="/src/assets/WhatWeDo/workers.png"
+                  src="../../assets/WhatWeDo/workers.png"
                   alt="farms"
                 />
                 <span className={css.stat_value}>3770</span>
