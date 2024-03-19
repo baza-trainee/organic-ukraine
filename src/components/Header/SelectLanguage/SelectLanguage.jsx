@@ -4,9 +4,9 @@ import Select from 'react-select';
 import customStyleSelect from './StyleSelectLanguage';
 
 const options = [
-  { value: 'uk-UA', label: 'UA' },
-  { value: 'en-US', label: 'EN' },
-  { value: 'pl-PL', label: 'PL' },
+  { value: 'uk', label: 'UA' },
+  { value: 'en', label: 'EN' },
+  { value: 'pl', label: 'PL' },
 ];
 
 export const SelectLanguage = () => {
@@ -38,7 +38,7 @@ export const SelectLanguage = () => {
     setSelectedOption(selectedOption);
     i18n.changeLanguage(selectedOption.value);
   };
-
+  console.log(selectedOption);
   return (
     <Select
       isSearchable={false}
