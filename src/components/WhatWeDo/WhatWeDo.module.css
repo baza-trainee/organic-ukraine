@@ -147,3 +147,22 @@
   height: 117px;
 }
 
+.modalContent {
+  width: 50%;
+  padding-right: 24px;
+}
+
+.modalImages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 540px;
+  height: 540px;
+}
+
+.organicName {
+  color: var(--primary-green-600);
+  position: absolute;
+  bottom: 56px;
+  left: 32px;
+}
