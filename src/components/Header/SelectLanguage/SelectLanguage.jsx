@@ -38,7 +38,6 @@ export const SelectLanguage = () => {
     setSelectedOption(selectedOption);
     i18n.changeLanguage(selectedOption.value);
   };
-  console.log(selectedOption);
   return (
     <Select
       isSearchable={false}

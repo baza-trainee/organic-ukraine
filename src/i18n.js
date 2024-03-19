@@ -10,7 +10,11 @@ i18next
   .init({
     fallbackLng: 'uk',
     // debug: true,
-
+    detection: {
+      order: ['navigator', 'cookie', 'htmlTag', 'path', 'subdomain'],
+      lookupFromPathIndex: 0,
+      checkWhitelist: true,
+    },
     ns: [
       'Header',
       'SupportTheProject',
