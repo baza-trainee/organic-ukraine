@@ -8,8 +8,8 @@ i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'uk',
-    debug: true,
+    fallbackLng: 'uk-UA',
+    // debug: true,
 
     ns: [
       'Header',

@@ -4,9 +4,9 @@ import Select from 'react-select';
 import customStyleSelect from './StyleSelectLanguage';
 
 const options = [
-  { value: 'uk', label: 'UA' },
-  { value: 'en', label: 'EN' },
-  { value: 'pl', label: 'PL' },
+  { value: 'uk-UA', label: 'UA' },
+  { value: 'en-US', label: 'EN' },
+  { value: 'pl-PL', label: 'PL' },
 ];
 
 export const SelectLanguage = () => {
