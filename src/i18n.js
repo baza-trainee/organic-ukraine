@@ -8,7 +8,7 @@ i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: ['uk-UA', 'ua'],
+    fallbackLng: ['uk-UA', 'uk'],
     // debug: true,
 
     ns: [
