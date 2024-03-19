@@ -66,7 +66,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
+
                   src={farms}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>53</span>
@@ -75,7 +77,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
+
                   src={lands}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>221</span>
@@ -84,7 +88,9 @@ export const WhatWeDo = () => {
               <div className={css.stat}>
                 <img
                   className={css.stats_img}
+
                   src={workers}
+
                   alt="farms"
                 />
                 <span className={css.stat_value}>3770</span>
