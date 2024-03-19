@@ -192,6 +192,91 @@ export const ArticlesAndTips = () => {
                   </button>
                 </div>
               </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.article}>
+                  <img
+                    className={styles.articleImg}
+                    src={img1}
+                    alt=""
+                    width={496}
+                    height={500}
+                  />
+                  <p className={styles.date}>21.02.2024</p>
+                  <p className={styles.articleTitle}>
+                    Як органічне сільске господарство впливає на наше середовище
+                  </p>
+                  <button
+                    className={styles.arrowBtn}
+                    onClick={() =>
+                      openModal(
+                        firstArticle.img,
+                        firstArticle.title,
+                        firstArticle.content,
+                        firstArticle.date
+                      )
+                    }
+                  >
+                    <img src={arrow} alt="logo" className={styles.arrow}></img>
+                  </button>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.article}>
+                  <img
+                    className={styles.articleImg}
+                    src={img3}
+                    alt=""
+                    width={496}
+                    height={500}
+                  />
+                  <p className={styles.date}>08.02.2024</p>
+                  <p className={styles.articleTitle}>
+                    5 простих кроків для переходу до щоденного споживання
+                    органічних продуктів
+                  </p>
+                  <button
+                    className={styles.arrowBtn}
+                    onClick={() =>
+                      openModal(
+                        secondArticle.img,
+                        secondArticle.title,
+                        secondArticle.content,
+                        secondArticle.date
+                      )
+                    }
+                  >
+                    <img src={arrow} alt="logo" className={styles.arrow}></img>
+                  </button>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.article}>
+                  <img
+                    className={styles.articleImg}
+                    src={img2}
+                    alt=""
+                    width={496}
+                    height={500}
+                  />
+                  <p className={styles.date}>23.01.2024</p>
+                  <p className={styles.articleTitle}>
+                    Чому органічні продукти - кращий вибір для вашого здоров'я
+                  </p>
+                  <button
+                    className={styles.arrowBtn}
+                    onClick={() =>
+                      openModal(
+                        thirdArticle.img,
+                        thirdArticle.title,
+                        thirdArticle.content,
+                        thirdArticle.date
+                      )
+                    }
+                  >
+                    <img src={arrow} alt="logo" className={styles.arrow}></img>
+                  </button>
+                </div>
+              </SwiperSlide>
             </div>
           </Swiper>
         </div>
