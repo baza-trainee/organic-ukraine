@@ -1,6 +1,5 @@
 import { Link } from 'react-scroll';
 
-// import style from './HeaderNavigation.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const itemsNavigation = [

@@ -6,14 +6,18 @@ import { SelectLanguage } from './SelectLanguage/SelectLanguage';
 import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
 import { LogoOrganic } from '../Common/Logo/LogoOrganic';
 import css from './Navigation/HeaderNavigation.module.scss';
+import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1440px)',
+  });
   return (
     <section className={style.header}>
       <Container>
         <header className={style.header_box}>
           <LogoOrganic />
-          <Navigation css={css} />
+          {isDesktop && <Navigation css={css} />}
           <div className={style.link_box}>
             <SupportTheProject />
             <SelectLanguage />
