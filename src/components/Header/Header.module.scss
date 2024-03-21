@@ -1,4 +1,4 @@
-.header {
+.header_section {
   //   max-width: 1440px;
   width: 100%;
   top: 0;
@@ -27,7 +27,7 @@
   width: 100%;
   align-items: center;
 }
-.custom_icon {
+.button_open_modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,4 +36,7 @@
   width: 44px;
   height: 44px;
   background-color: inherit;
+  @media (min-width: 1440px) {
+    display: none;
+  }
 }

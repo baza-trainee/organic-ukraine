@@ -6,7 +6,6 @@ import { SelectLanguage } from './SelectLanguage/SelectLanguage';
 import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
 import { LogoOrganic } from '../Common/Logo/LogoOrganic';
 import css from './Navigation/HeaderNavigation.module.scss';
-import { useMediaQuery } from 'react-responsive';
 import burgerMenu from '../../assets/icons/burgermenu.svg';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { useState } from 'react';
@@ -16,31 +15,33 @@ export const Header = () => {
 
   const togleIsMenu = () => {
     setIsMenu(!isMenu);
+    document.body.style.overflow = 'hidden';
   };
-  console.log(isMenu);
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 1440px)',
-  });
+  const closeMemu = () => {
+    setIsMenu(!isMenu);
+    document.body.style.overflow = '';
+  };
+
   return (
-    <header className={style.header}>
+    <header className={style.header_section}>
       <Container>
         <div className={style.header_box}>
           <LogoOrganic />
-          {isDesktop && <Navigation css={css} />}
+          <Navigation css={css} />
           <div className={style.link_box}>
             <SupportTheProject />
             <SelectLanguage />
           </div>
-          {!isDesktop && (
-            <button
-              type="button"
-              className={style.custom_icon}
-              onClick={togleIsMenu}
-            >
-              <img src={burgerMenu} alt="open mobile menu" />
-            </button>
-          )}
-          {isMenu && <MobileMenu isMenu={togleIsMenu} />}
+
+          <button
+            type="button"
+            className={style.button_open_modal}
+            onClick={togleIsMenu}
+          >
+            <img src={burgerMenu} alt="open mobile menu" />
+          </button>
+
+          {isMenu && <MobileMenu isMenu={closeMemu} />}
         </div>
       </Container>
     </header>
