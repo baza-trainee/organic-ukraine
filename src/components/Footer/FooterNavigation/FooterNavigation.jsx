@@ -23,7 +23,7 @@ export const FooterNavigation = () => {
               to={name}
               smooth="true"
               duration={50}
-              offset={-120}
+              // offset={0}
               className={styles.link}
             >
               {t(name)}
