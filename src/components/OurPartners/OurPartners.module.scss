@@ -1,5 +1,7 @@
 .partnersSection {
-  margin-top: 150px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 150px 0 0 120px;
 }
 
 .partnersSectionHeader {
@@ -51,7 +53,6 @@
 }
 
 .partnersSwiperSlide {
- 
   height: auto;
   padding: 32px;
   border-radius: 20px;
@@ -65,7 +66,7 @@
     cursor: grabbing;
   }
 
-  & img{
+  & img {
     width: auto;
     height: auto;
     object-fit: cover;

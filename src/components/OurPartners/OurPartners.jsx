@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { Container } from '../Common/Container/Container';
 import { useTranslation } from 'react-i18next';
 // import SwiperNavigation from '../Common/SwiperNavigation/SwiperNavigation';
 
@@ -39,7 +38,7 @@ export const OurPartners = () => {
 
   return (
     <section className={styles.partnersSection} id='OurPartners'>
-      <Container>
+      
         <div className={styles.partnersSectionHeader}>
           <h2 className={styles.partnersSectionTitle}> {t('OurPartners')}</h2>
           {/* <SwiperNavigation
@@ -60,7 +59,7 @@ export const OurPartners = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={8}
-          slidesPerView={5.2}
+          slidesPerView={5.5}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false}}
           speed={3000}
@@ -76,7 +75,7 @@ export const OurPartners = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Container>
+      
     </section>
   );
 };
