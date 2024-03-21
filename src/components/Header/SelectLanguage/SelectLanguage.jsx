@@ -15,14 +15,6 @@ export const SelectLanguage = () => {
     options.find(option => option.value === i18n.language) || options[0]
   );
 
-  const filteredOptions = options.filter(
-    option => option.value !== i18n.language
-  );
-
-  const handleChange = selectedOption => {
-    setSelectedOption(selectedOption);
-    i18n.changeLanguage(selectedOption.value);
-  };
   useEffect(() => {
     const handleLanguageChange = () => {
       const currentLanguageOption = options.find(
@@ -37,15 +29,22 @@ export const SelectLanguage = () => {
       i18n.off('languageChanged', handleLanguageChange);
     };
   }, [i18n]);
+
+  const filteredOptions = options.filter(
+    option => option.value !== selectedOption.value
+  );
+
+  const handleChange = selectedOption => {
+    setSelectedOption(selectedOption);
+    i18n.changeLanguage(selectedOption.value);
+  };
   return (
-    <>
-      <Select
-        isSearchable={false}
-        styles={customStyleSelect}
-        value={selectedOption}
-        onChange={handleChange}
-        options={filteredOptions}
-      />
-    </>
+    <Select
+      isSearchable={false}
+      styles={customStyleSelect}
+      value={selectedOption}
+      onChange={handleChange}
+      options={filteredOptions}
+    />
   );
 };

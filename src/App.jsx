@@ -58,12 +58,14 @@ function App() {
     <>
       <Favicon url="favicon.ico" />
       <Header />
-      <Hero />
-      <WhatWeDo />
-      <OrganicGoods />
-      <ArticlesAndTips />
-      <FarmLocationsMap />
-      <OurPartners />
+      <main>
+        <Hero />
+        <WhatWeDo />
+        <OrganicGoods />
+        <ArticlesAndTips />
+        <FarmLocationsMap />
+        <OurPartners />
+      </main>
       <Footer />
       <ScrollUp />
     </>
