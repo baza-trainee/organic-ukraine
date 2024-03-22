@@ -1,12 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import './swiperStyle.scss';
+
 import style from './Hero.module.scss';
 import heroImage1x from '../../assets/images/Hero/Hero 1X.webp';
 import heroImage21x from '../../assets/images/Hero/Hero2 1x.webp';
 import heroImage2x from '../../assets/images/Hero/Hero 1X.webp';
 import vector from '../../assets/images/Hero/Vector.png';
 import vectorTablet from '../../assets/images/Hero/VectorTablet.png';
-
 import imageTabl1 from '../../assets/images/Hero/Hero1tablet.webp';
 import imageTabl2 from '../../assets/images/Hero/Hero2tablet.webp';
 import imageTabl3 from '../../assets/images/Hero/Hero1tablet.webp';
@@ -18,6 +17,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import './swiperStyle.scss';
 import { useMediaQuery } from 'react-responsive';
 
 const banersDesctop = [heroImage1x, heroImage21x, heroImage2x];
