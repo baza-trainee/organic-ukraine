@@ -1,29 +1,61 @@
+@keyframes menuAppear {
+  0% {
+    // opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    // opacity: 1;
+    transform: scale(1);
+  }
+}
 .scroll_button {
-  z-index: 2;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   position: fixed;
-  right: 120px;
-  // bottom: 505px;
+  right: 5vw;
   bottom: 10vh;
   width: 64px;
   height: 64px;
-
-  background-color: var(--secondary-brown-100);
+  background-color: var(--secondary-brown-200);
   box-shadow:
     0 1px 3px 1px rgba(93, 70, 63, 0.15),
     0 1px 2px 0 rgba(93, 70, 63, 0.3);
-
+  animation: menuAppear 0.5s ease forwards;
   transition: background-color 0.3s ease;
-  img {
+  .scroll_arrow {
     width: 24px;
     height: 24px;
     transform: rotate(90deg);
+    path {
+      fill: var(--secondary-brown-600);
+      transition: fill 0.3s ease;
+    }
   }
   &:hover {
     cursor: pointer;
-    background-color: var(--light-grey);
+    background-color: var(--secondary-brown-100);
+    .scroll_arrow path {
+      fill: var(--secondary-brown-950);
+    }
   }
+}
+@keyframes menuDisappear {
+  100% {
+    // opacity: 1;
+    transform: scale(0);
+  }
+
+  0% {
+    // opacity: 0;
+    transform: scale(1);
+  }
+}
+.hide {
+  width: 0;
+  height: 0;
+  animation: menuDisappear 0.5s ease forwards;
 }
