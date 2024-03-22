@@ -65,11 +65,31 @@ export const OrganicGoods = () => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={24}
-        slidesPerView={4}
+        slidesPerView={1}
         speed={1500}
         navigation={{
           prevEl: `.${styles.customPrevButton}`,
           nextEl: `.${styles.customNextButton}`,
+        }}
+         breakpoints={{
+          1400: {
+            slidesPerView: 4,
+          },
+          1300: {
+            slidesPerView: 3.7,
+          },
+          1050: {
+            slidesPerView: 3.2,
+           },
+           900: {
+             slidesPerView: 2.7
+           },
+          768: {
+            slidesPerView: 2.35,
+          },
+          590: {
+            slidesPerView: 2,
+          },
         }}
         className={`${styles.organicProductsSwiper} swiper`}
       >
@@ -108,11 +128,31 @@ export const OrganicGoods = () => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={24}
-        slidesPerView={4}
+        slidesPerView={1}
         speed={1500}
         navigation={{
           prevEl: `.${styles.customPrevButton}`,
           nextEl: `.${styles.customNextButton}`,
+        }}
+          breakpoints={{
+          1400: {
+            slidesPerView: 4,
+          },
+          1300: {
+            slidesPerView: 3.7,
+          },
+          1050: {
+            slidesPerView: 3.2,
+           },
+           900: {
+             slidesPerView: 2.7
+           },
+          768: {
+            slidesPerView: 2.35,
+          },
+          590: {
+            slidesPerView: 2,
+          },
         }}
         className={`${styles.organicProductsSwiper} swiper`}
       >

@@ -2,15 +2,48 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 150px 0 0 120px;
+
+  @media (max-width: 1400px) {
+    padding: 150px 0 0 100px;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 150px 0 0 70px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 150px 0 0 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 150px 0 0 32px;
+  }
 }
 
 .organicProductsSectionHeader {
-  max-width: 1195px;
+  max-width: 1435px;
   margin-bottom: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 5px;
+  padding-right: 120px;
+
+  @media (max-width: 1400px) {
+    padding-right: 100px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-right: 70px;
+  }
+
+  @media (max-width: 900px) {
+    padding-right: 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding-right: 32px;
+  }
 }
 
 .organicProductsSectionTitle {
@@ -20,6 +53,10 @@
   font-weight: 700;
   line-height: 46px;
   color: var(--secondary-brown-900);
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .customNavigationBlock {
@@ -50,64 +87,63 @@
 
 .organicProductsSwiper {
   padding: 5px 0 24px 5px;
-  }
+}
 
 .organicProductsSwiperSlide {
- 
   height: 500px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 3px 0 rgba(93,70,63,.3),0 4px 8px 3px rgba(93,70,63,.15);
+  box-shadow:
+    0 1px 3px 0 rgba(93, 70, 63, 0.3),
+    0 4px 8px 3px rgba(93, 70, 63, 0.15);
   cursor: grab;
-  
 
-  
+  @media (max-width: 768px) {
+    height: 479px;
+  }
+
   &:active {
     cursor: grabbing;
   }
-
-  
-
-  .organicImg{
+  .organicImg {
     width: 100%;
     height: auto;
     object-fit: cover;
-    
   }
 }
 
-.organicProductsSwiperSlideWrapper{
-  padding: 0px 32px 15px;
-  font-family: var(--third-family);
+.organicProductsSwiperSlideWrapper {
+  padding: 0px 32px 26px;
+  font-family: var(--second-family);
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 295px;
-  
+  justify-content: space-between;
+  height: 160px;
+
+  @media (max-width: 900px) {
+    height: 140px;
+  }
 }
 
-.organicProductsSwiperSlideTitle{
-color: var(--secondary-brown-600);
+.organicProductsSwiperSlideTitle {
+  color: var(--secondary-brown-600);
   font-size: 14px;
-  font-family: var(--second-family);
-  
   line-height: 1.43;
 }
 
-.organicProductsSwiperSlideDescription{
-color: var( --secondary-brown-950);
+.organicProductsSwiperSlideDescription {
+  color: var(--secondary-brown-950);
   font-size: 18px;
-   line-height: 1.33;
- }
-
-.organicProductsSwiperSlideQuality{
-  color: var(--primary-green-600);
-  font-size: 14px;
-    line-height: 1.43;
-    margin-top: 20px;
+  line-height: 1.33;
 }
 
+.organicProductsSwiperSlideQuality {
+  color: var(--primary-green-600);
+  font-size: 14px;
+  line-height: 1.43;
+  margin-top: 20px;
+}
