@@ -1,9 +1,15 @@
 import { useTranslation } from 'react-i18next';
+import './swiperStyle.scss';
 import style from './Hero.module.scss';
 import heroImage1x from '../../assets/images/Hero/Hero 1X.webp';
 import heroImage21x from '../../assets/images/Hero/Hero2 1x.webp';
-import heroImage2x from '../../assets/images/Hero/Hero 2X.webp';
+import heroImage2x from '../../assets/images/Hero/Hero 1X.webp';
 import vector from '../../assets/images/Hero/Vector.png';
+import vectorTablet from '../../assets/images/Hero/VectorTablet.png';
+
+import imageTabl1 from '../../assets/images/Hero/Hero1tablet.webp';
+import imageTabl2 from '../../assets/images/Hero/Hero2tablet.webp';
+import imageTabl3 from '../../assets/images/Hero/Hero1tablet.webp';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,16 +18,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useMediaQuery } from 'react-responsive';
 
-import './swiperStyle.scss';
-const baners = [heroImage1x, heroImage21x, heroImage2x];
+const banersDesctop = [heroImage1x, heroImage21x, heroImage2x];
+const banersTablet = [imageTabl1, imageTabl2, imageTabl3];
 
 export const Hero = () => {
   const { t } = useTranslation('Hero');
-
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1440px)',
+  });
+  const imagesArrey = isDesktopOrLaptop ? banersDesctop : banersTablet;
+  const bottomImage = isDesktopOrLaptop ? vector : vectorTablet;
   return (
     <section className={style.hero_section}>
-      <div className={style.container}>
+      <div className={style.hero_container}>
         <Swiper
           className={'swiper-first'}
           speed={2000}
@@ -29,7 +40,7 @@ export const Hero = () => {
           navigation
           pagination={{ clickable: true }}
         >
-          {baners.map((slide, index) => (
+          {imagesArrey.map((slide, index) => (
             <SwiperSlide key={index}>
               <img
                 loading="lazy"
@@ -46,7 +57,7 @@ export const Hero = () => {
           <p className={style.second_text}>{t('paragraf')}</p>{' '}
         </div>
 
-        <img src={vector} alt="bottom" className={style.bottom_image} />
+        <img src={bottomImage} alt="bottom" className={style.bottom_image} />
       </div>
     </section>
   );

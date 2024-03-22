@@ -40,9 +40,8 @@ export const Header = () => {
           >
             <img src={burgerMenu} alt="open mobile menu" />
           </button>
-
-          {isMenu && <MobileMenu isMenu={closeMemu} />}
         </div>
+        {isMenu && <MobileMenu isMenu={closeMemu} />}
       </Container>
     </header>
   );
