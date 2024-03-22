@@ -45,11 +45,10 @@ const customStyleSelect = {
     border: 'none',
     width: '100%',
     justifyContent: 'center',
-
     borderRadius: '99px',
     marginTop: '8px',
-
     overflow: 'hidden',
+    // marginTop: window.innerHeight < 700 ? '-180px' : '8px',
   }),
 
   menuList: provided => ({
@@ -59,6 +58,7 @@ const customStyleSelect = {
     boxShadow: 'none',
     border: 'none',
     flexDirection: 'column',
+    // flexDirection: 'column-reverse',
     gap: '8px',
     margin: '0',
     paddingTop: '0',

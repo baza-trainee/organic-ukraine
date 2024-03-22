@@ -12,7 +12,7 @@ i18n
   .init({
     lng: initialLang,
     fallbackLng: initialLang,
-    debug: true,
+    // debug: true,
 
     ns: [
       'Header',
