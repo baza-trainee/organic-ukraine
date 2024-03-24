@@ -4,12 +4,13 @@
   top: 0;
   left: 0;
   position: fixed;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   background: rgba(255, 255, 255, 0.9);
   z-index: 999;
   @media screen and (min-width: 768px) {
-    // max-width: 1440px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 }
 
@@ -22,11 +23,14 @@
 }
 
 .link_box {
-  display: flex;
+  display: none;
   justify-content: space-between;
   max-width: 299px;
   width: 100%;
   align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 .button_open_modal {
   display: flex;

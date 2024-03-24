@@ -6,9 +6,12 @@ import heroImage21x from '../../assets/images/Hero/Hero2 1x.webp';
 import heroImage2x from '../../assets/images/Hero/Hero 1X.webp';
 import vector from '../../assets/images/Hero/Vector.png';
 import vectorTablet from '../../assets/images/Hero/VectorTablet.png';
+import vectorMobile from '../../assets/images/Hero/VectorMobile.png';
 import imageTabl1 from '../../assets/images/Hero/Hero1tablet.webp';
 import imageTabl2 from '../../assets/images/Hero/Hero2tablet.webp';
 import imageTabl3 from '../../assets/images/Hero/Hero1tablet.webp';
+
+import imageMobile2 from '../../assets/images/Hero/Hero2mobile.webp';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,14 +25,26 @@ import { useMediaQuery } from 'react-responsive';
 
 const banersDesctop = [heroImage1x, heroImage21x, heroImage2x];
 const banersTablet = [imageTabl1, imageTabl2, imageTabl3];
+const banersMobile = [imageMobile2, imageMobile2, imageMobile2];
 
 export const Hero = () => {
   const { t } = useTranslation('Hero');
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1440px)',
   });
-  const imagesArrey = isDesktopOrLaptop ? banersDesctop : banersTablet;
-  const bottomImage = isDesktopOrLaptop ? vector : vectorTablet;
+  const imagesArrey = isMobile
+    ? banersMobile
+    : isDesktopOrLaptop
+      ? banersDesctop
+      : banersTablet;
+
+  const bottomImage = isMobile
+    ? vectorMobile
+    : isDesktopOrLaptop
+      ? vector
+      : vectorTablet;
   return (
     <section className={style.hero_section}>
       <div className={style.hero_container}>
