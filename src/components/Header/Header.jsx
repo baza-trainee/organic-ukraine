@@ -6,19 +6,24 @@ import { SelectLanguage } from './SelectLanguage/SelectLanguage';
 import { SupportTheProject } from '../Common/SupportTheProject/SupportTheProject';
 import { LogoOrganic } from '../Common/Logo/LogoOrganic';
 import css from './Navigation/HeaderNavigation.module.scss';
-import burgerMenu from '../../assets/icons/burgermenu.svg';
+import BurgerMenuTablet from '../../assets/icons/burgermenu.svg?react';
+import BurgerMenuMobile from '../../assets/icons/burgermenu_mobile.svg?react';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
+  const isMobileOrTablet = useMediaQuery({
+    query: '(min-width: 768px)',
+  });
 
   const togleIsMenu = () => {
     setIsMenu(!isMenu);
     document.body.style.overflow = 'hidden';
   };
   const closeMemu = () => {
-    setIsMenu(!isMenu);
+    setIsMenu(false);
     document.body.style.overflow = '';
   };
 
@@ -38,7 +43,8 @@ export const Header = () => {
             className={style.button_open_modal}
             onClick={togleIsMenu}
           >
-            <img src={burgerMenu} alt="open mobile menu" />
+            {isMobileOrTablet ? <BurgerMenuTablet /> : <BurgerMenuMobile />}
+            {/* <img src={burgerMenu} alt="open mobile menu" /> */}
           </button>
         </div>
         {isMenu && <MobileMenu isMenu={closeMemu} />}

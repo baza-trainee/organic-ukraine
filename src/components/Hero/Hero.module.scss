@@ -5,12 +5,14 @@
 }
 .hero_container {
   position: relative;
-
   margin-left: auto;
   margin-right: auto;
+  max-width: 420px;
+
   @media (min-width: 768px) {
     max-width: 768px;
   }
+
   @media (min-width: 1440px) {
     max-width: 1440px;
   }
@@ -26,12 +28,15 @@
 .hero_text_box {
   z-index: 1;
   position: absolute;
-  top: 268px;
+  top: 300px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
+  width: 388px;
+  height: 172px;
 
   @media (min-width: 768px) {
+    top: 268px;
     width: 530px;
     height: 204px;
   }
@@ -43,6 +48,9 @@
 .main_text {
   margin-bottom: 16px;
   font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 124%;
   text-align: center;
   color: transparent;
   background-image: url('../../assets/images/Hero/TextBackground.webp');
@@ -53,14 +61,11 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   @media (min-width: 768px) {
-    font-weight: 400;
     font-size: 44px;
-    line-height: 124%;
   }
   @media (min-width: 1440px) {
     font-weight: 700;
     font-size: 70px;
-    line-height: 124%;
   }
 }
 .second_text {
@@ -69,10 +74,13 @@
   max-width: 414px;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 132%;
   color: var(--secondary-brown-900);
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 }
 .customPrevButton,
 .customNextButton {
