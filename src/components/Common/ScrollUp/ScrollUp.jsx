@@ -20,7 +20,7 @@ export const ScrollUp = () => {
   return (
     <button
       type="button"
-      className={isVisible ? style.scroll_button : style.hide}
+      className={`${style.scroll_button} ${isVisible ? '' : style.hide}`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       <Arrow className={style.scroll_arrow} />
