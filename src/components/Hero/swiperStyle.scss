@@ -24,19 +24,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    background-color: var(--grey-50);
-  }
+  transition: 0.3s ease;
   &::after {
     content: '';
-    // background-image: url('/src/assets/icons/arrow_swiper.svg');
     background-image: url('/svg/arrow_swiper.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
     height: 24px;
+    transition: 0.3s ease;
+  }
+  &:hover {
+    background-color: var(--grey-50);
+    &::after {
+      background-image: url('/svg/arrow_swiper_hover.svg');
+    }
   }
 }
 .swiper-first {

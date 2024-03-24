@@ -47,25 +47,30 @@
 
 .close_menu {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 0;
   top: -22px;
   height: 44px;
   width: 44px;
   border-radius: 50%;
   background-color: var(--secondary-brown-100);
-  &::before {
-    content: '';
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-
+  transition: 0.3s ease;
+  .icon_close {
     width: 14px;
     height: 14px;
-    fill: var(--secondary-brown-800);
-    background-image: url('../../../assets/icons/closeIcon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    path {
+      fill: var(--secondary-brown-800);
+      transition: 0.3s ease;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: var(--grey-50);
+    path {
+      fill: var(--grey-600);
+    }
   }
 }
 
